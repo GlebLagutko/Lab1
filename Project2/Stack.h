@@ -27,8 +27,10 @@ public:
 	Stack(Stack&& other)
 		: stack(other.stack),
 		size(other.size),
-		number(other.number)
-	{
+		number(other.number) {
+		other.stack = nullptr;
+		other.size = 0;
+		other.number = 0;
 	}
 
 	~Stack() {
@@ -67,6 +69,9 @@ public:
 		stack = other.stack;
 		size = other.size;
 		number = other.number;
+		other.stack = nullptr;
+		other.size = 0;
+		other.number = 0;
 		return *this;
 	}
 
