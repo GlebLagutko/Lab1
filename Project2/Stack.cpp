@@ -61,7 +61,8 @@ void Stack::Clear() {
 }
 
 void Stack::Swap(Stack& secondStack) {
-	//int* newStack = new int[secondStack
-
-	
+	//swap(*this, secondStack);
+	swap(size, secondStack.size);
+	swap(number, secondStack.number);
+	swap(stack, secondStack.stack);
 }
